@@ -13,6 +13,7 @@ interface ButtonAsLink extends ButtonBase {
   href: string
   target?: '_blank' | '_self'
   rel?: string
+  'aria-label'?: string
   onClick?: never
   type?: never
 }
@@ -21,6 +22,7 @@ interface ButtonAsButton extends ButtonBase {
   href?: never
   target?: never
   rel?: never
+  'aria-label'?: string
   onClick?: React.MouseEventHandler<HTMLButtonElement>
   type?: 'button' | 'submit' | 'reset'
 }
@@ -33,7 +35,7 @@ export default function Button(props: ButtonProps) {
   const combinedClass = clsx(styles.button, styles[variant], className)
 
   if (props.href !== undefined) {
-    const { href, target, rel } = props
+    const { href, target, rel, 'aria-label': ariaLabel } = props
     const isExternal = target === '_blank'
     const resolvedRel = rel ?? (isExternal ? 'noopener noreferrer' : undefined)
 
@@ -42,6 +44,7 @@ export default function Button(props: ButtonProps) {
         href={href}
         target={target}
         rel={resolvedRel}
+        aria-label={ariaLabel}
         className={combinedClass}
       >
         {children}
@@ -49,12 +52,13 @@ export default function Button(props: ButtonProps) {
     )
   }
 
-  const { onClick, type = 'button' } = props as ButtonAsButton
+  const { onClick, type = 'button', 'aria-label': ariaLabel } = props as ButtonAsButton
 
   return (
     <button
       type={type}
       onClick={onClick}
+      aria-label={ariaLabel}
       className={combinedClass}
     >
       {children}

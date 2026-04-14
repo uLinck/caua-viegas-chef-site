@@ -1,0 +1,78 @@
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  padding: 32px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.serviceCard:hover {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-primary);
+}
+
+.cardTitle {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+
+.cardSubtitle {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-top: 16px;
+}
+
+.cardDescription {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-top: 48px;
+}
+
+.cardHighlight {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  border-left: 2px solid var(--color-primary);
+  padding-left: 16px;
+  margin: 64px 0 0 0;
+}
+
+.cardItems {
+  list-style: none;
+  padding: 0;
+  margin: 64px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.checkIcon {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  color: var(--color-primary);
+}
+
+.cardCta {
+  margin-top: auto;
+  padding-top: 32px;
+}

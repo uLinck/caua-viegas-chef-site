@@ -76,7 +76,7 @@ export const SERVICE_ITEMS: ServiceItem[] = [
       'Seleção de fornecedores',
       'Padronização de processos',
     ],
-    ctaLabel: 'Saber Mais',
+    ctaLabel: 'Conhecer a Consultoria',
     messageKey: 'consultoria',
   },
   {
