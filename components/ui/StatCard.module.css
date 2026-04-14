@@ -1,0 +1,27 @@
+.statCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  padding: 24px;
+}
+
+.statCard dl {
+  margin: 0;
+}
+
+.statValue {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.statLabel {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+  margin-top: 8px;
+}
