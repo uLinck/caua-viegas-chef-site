@@ -1,1 +1,51 @@
 @import "tailwindcss";
+
+/* CSS custom properties for var() usage in CSS Modules */
+:root {
+  --color-background: #0A0A0A;
+  --color-surface: #141414;
+  --color-surface-hover: #1C1C1C;
+  --color-border: #2A2A2A;
+  --color-text-primary: #F5F0E8;
+  --color-text-secondary: #A39E93;
+  --color-primary: #C4A265;
+  --color-primary-hover: #D4B67A;
+  --color-accent: #8B3A3A;
+  --color-whatsapp: #25D366;
+}
+
+/* @theme inline bridges CSS vars to Tailwind utility classes */
+/* Generates: bg-background, text-text-primary, bg-surface, font-sans, font-display etc. */
+@theme inline {
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-surface-hover: var(--color-surface-hover);
+  --color-border: var(--color-border);
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-accent: var(--color-accent);
+  --color-whatsapp: var(--color-whatsapp);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-noto-serif-jp);
+}
+
+/* Global base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans, system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
