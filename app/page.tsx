@@ -1,14 +1,15 @@
+import Hero from '@/components/sections/Hero'
+import About from '@/components/sections/About'
+import Services from '@/components/sections/Services'
+import Footer from '@/components/layout/Footer'
+
 export default function Home() {
   return (
     <main id="main-content">
-      <section className="flex min-h-screen flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold text-text-primary">
-          Cauã Viegas
-        </h1>
-        <p className="mt-4 text-text-secondary">
-          Personal Chef | Gastronomia Japonesa
-        </p>
-      </section>
+      <Hero />
+      <About />
+      <Services />
+      <Footer />
     </main>
   )
 }
