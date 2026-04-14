@@ -1,0 +1,32 @@
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.centered {
+  align-items: center;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+
+.rule {
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-primary);
+  margin-top: 12px;
+}
