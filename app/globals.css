@@ -91,6 +91,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+/* Custom scrollbar for dark mode compatibility */
+@supports (scrollbar-color: auto) {
+  html {
+    scrollbar-color: var(--color-text-muted) var(--color-background);
+  }
+}
+
 /* ---- Scroll Entrance Animations --------------------------------
    Pure CSS scroll-driven animations using animation-timeline: view().
    Zero JavaScript, zero "use client" boundaries.
