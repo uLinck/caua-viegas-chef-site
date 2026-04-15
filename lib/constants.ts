@@ -63,6 +63,8 @@ export const SERVICE_ITEMS: ServiceItem[] = [
     ],
     ctaLabel: 'Solicitar Proposta',
     messageKey: 'eventos',
+    imageSrc: '/images/food-table-1.jpeg',
+    imageAlt: 'Mesa elegante com pratos de gastronomia japonesa em evento exclusivo',
   },
   {
     id: 'consultoria',
@@ -78,6 +80,8 @@ export const SERVICE_ITEMS: ServiceItem[] = [
     ],
     ctaLabel: 'Conhecer a Consultoria',
     messageKey: 'consultoria',
+    imageSrc: '/images/chef-cooking-1.jpeg',
+    imageAlt: 'Chef Cauã Viegas preparando pratos em cozinha profissional',
   },
   {
     id: 'curso',
@@ -93,5 +97,7 @@ export const SERVICE_ITEMS: ServiceItem[] = [
     ],
     ctaLabel: 'Quero Me Inscrever',
     messageKey: 'curso',
+    imageSrc: '/images/students-certificates.jpg',
+    imageAlt: 'Alunos com certificados após curso de sushi com o Chef Cauã Viegas',
   },
 ]

@@ -7,6 +7,8 @@ export interface ServiceItem {
   items: string[]
   ctaLabel: string
   messageKey: 'fab' | 'eventos' | 'consultoria' | 'curso'
+  imageSrc: string
+  imageAlt: string
 }
 
 export interface GalleryItem {
