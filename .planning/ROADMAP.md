@@ -13,6 +13,7 @@ Four sequential phases deliver a conversion-focused single-page marketing websit
 - [ ] **Phase 3: Client Islands** - Header (scroll blur + hamburger), Gallery + Lightbox, Contact form, WhatsApp FAB — all four interactive components
 - [ ] **Phase 4: QA & Launch** - Lighthouse 90+ audit, WCAG AA verification, TypeScript strict pass, local build verification, and Vercel production deployment
 - [ ] **Phase 5: Visual Redesign** - Complete visual overhaul: light Japanese aesthetic, Cormorant Garamond typography, real photography, sticky header/nav, scroll animations, first-person Brazilian Portuguese copy
+- [ ] **Phase 6: Website Improvements** - Dark mode, gallery, service card images, header CTA, mobile nav fix
 
 ---
 
@@ -137,7 +138,7 @@ Plans:
 **Success Criteria** (what must be TRUE):
   1. `npx tsc --noEmit` exits with code 0 and zero output — no TypeScript errors under strict mode
   2. `npx next build` completes locally without errors — CSS ordering, import casing, and bundle issues caught before Vercel sees the code
-  3. Lighthouse run in Chrome DevTools (mobile emulation) shows Performance ≥ 90, Accessibility ≥ 90, Best Practices ≥ 90, SEO ≥ 90
+  3. Lighthouse run in Chrome DevTools (mobile emulation) shows Performance >= 90, Accessibility >= 90, Best Practices >= 90, SEO >= 90
   4. On a real Android or iOS device: clicking any WhatsApp CTA (Services cards, FAB, Contact form submit) opens WhatsApp with correctly encoded Portuguese text in the pre-filled message
   5. Keyboard-only navigation covers the full page — every interactive element is reachable via Tab, all focus indicators are visible, the Lightbox focus trap works, and the skip-to-content link skips to `<main>`
 **Plans**: 3 plans
@@ -158,13 +159,13 @@ Plans:
   - Portrait: `sizes="(max-width: 768px) 100vw, 50vw"`, no `fill` prop, has `width` and `height`
   - Gallery images: `sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"`
   - Zero `<img>` tags in page source (Lighthouse will flag them)
-- **Lighthouse audit process:** Open Chrome, navigate to production URL (or localhost with `next build && next start`). DevTools → Lighthouse → Mobile → Generate report. Run twice (first run may be cold). Target: all four categories ≥ 90. Common failures to fix: missing `alt` text, low contrast text, missing `aria-label` on icon-only buttons, render-blocking resources, missing `sizes` prop on images.
+- **Lighthouse audit process:** Open Chrome, navigate to production URL (or localhost with `next build && next start`). DevTools -> Lighthouse -> Mobile -> Generate report. Run twice (first run may be cold). Target: all four categories >= 90. Common failures to fix: missing `alt` text, low contrast text, missing `aria-label` on icon-only buttons, render-blocking resources, missing `sizes` prop on images.
 - **WCAG AA color contrast:** Test `#F5F0E8` on `#0A0A0A` (primary text on background — passes), `#C4A265` on `#0A0A0A` (gold CTA text — verify), `#A39E93` on `#141414` (secondary text — verify). Use browser DevTools accessibility panel or axe extension. Fix any failures before deployment.
-- **44×44px tap targets:** Check all buttons, links, and interactive elements in Chrome DevTools → Layers or mobile emulation. FAB, hamburger button, nav links, gallery thumbnails, close/prev/next in Lightbox. Use `min-height: 44px; min-width: 44px` in CSS Module if native size is smaller.
+- **44x44px tap targets:** Check all buttons, links, and interactive elements in Chrome DevTools -> Layers or mobile emulation. FAB, hamburger button, nav links, gallery thumbnails, close/prev/next in Lightbox. Use `min-height: 44px; min-width: 44px` in CSS Module if native size is smaller.
 - **Real-device WhatsApp test (mandatory):** Open the production URL on an actual Android or iOS device (not Chrome DevTools emulation). Click each WhatsApp entry point:
-  1. FAB → general greeting message
-  2. Each of the three ServiceCard CTAs → service-specific messages
-  3. Contact form submit (fill all fields, submit) → form data message
+  1. FAB -> general greeting message
+  2. Each of the three ServiceCard CTAs -> service-specific messages
+  3. Contact form submit (fill all fields, submit) -> form data message
   Verify: WhatsApp opens, pre-filled text is readable Portuguese (not garbled), accented characters render correctly.
 - **SEO final check:** View page source and confirm: `<title>` present, `<meta name="description">` present, Open Graph tags present (`og:title`, `og:description`, `og:image`, `og:url`), JSON-LD `<script type="application/ld+json">` present with valid LocalBusiness schema. Robots meta tag allows indexing.
 - **Vercel deployment:** Connect GitHub repo (or `vercel --prod` via CLI). Confirm Node.js 22 LTS is set in project settings. First deploy will show build logs — confirm green. Check that environment matches local build (no env vars needed for this project, but confirm). Verify the production URL loads with HTTPS.
@@ -175,7 +176,7 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in strict numeric order: 1 → 2 → 3 → 4 → 5
+Phases execute in strict numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -183,7 +184,8 @@ Phases execute in strict numeric order: 1 → 2 → 3 → 4 → 5
 | 2. Server Sections | 4/4 | Complete   | 2026-04-14 |
 | 3. Client Islands | 0/4 | Not started | - |
 | 4. QA & Launch | 0/3 | Not started | - |
-| 5. Visual Redesign | 3/5 | In Progress|  |
+| 5. Visual Redesign | 5/5 | Complete   | 2026-04-15 |
+| 6. Website Improvements | 0/5 | Not started | - |
 
 ---
 
@@ -263,15 +265,22 @@ Phases execute in strict numeric order: 1 → 2 → 3 → 4 → 5
 | VIS-SCROLL-ANIM | Phase 5 | Pending |
 | VIS-DIVIDERS | Phase 5 | Pending |
 | VIS-BUILD | Phase 5 | Pending |
+| IMP-DARKMODE | Phase 6 | Pending |
+| IMP-HEADER-CTA | Phase 6 | Pending |
+| IMP-MOBILE-NAV | Phase 6 | Pending |
+| IMP-SERVICE-CARDS | Phase 6 | Pending |
+| IMP-FONT-FIX | Phase 6 | Pending |
+| IMP-GALLERY | Phase 6 | Pending |
+| IMP-IMAGES | Phase 6 | Pending |
 
-**Coverage:** 69/69 requirements mapped (54 v1 + 15 v2 visual redesign). No orphans.
+**Coverage:** 76/76 requirements mapped (54 v1 + 15 v2 visual redesign + 7 v3 improvements). No orphans.
 
 ### Phase 5: Full visual redesign — Japanese aesthetic, header/nav, real images, animations, first-person copy
 
 **Goal:** Complete visual overhaul of the page: replace the dark theme with a warm off-white Japanese aesthetic (#F8F4EF), swap Noto Serif JP for Cormorant Garamond headings, add real photography from the images/ folder, create a sticky header with mobile hamburger drawer, add CSS scroll-driven entrance animations, rewrite all copy to first-person Brazilian Portuguese, and apply rounded corners + hover effects to all interactive elements. The build passes after all changes.
 **Requirements**: VIS-PALETTE, VIS-TYPO, VIS-IMAGES, VIS-HEADER, VIS-NAV, VIS-HERO, VIS-ABOUT, VIS-VOICE, VIS-SERVICES, VIS-UI-ATOMS, VIS-ROUNDED, VIS-FOOTER, VIS-SCROLL-ANIM, VIS-DIVIDERS, VIS-BUILD
 **Depends on:** Phase 2 (Server Sections must exist before redesigning them)
-**Plans:** 3/5 plans executed
+**Plans:** 5/5 plans executed
 
 Plans:
 - [x] 05-01-PLAN.md — Foundation: copy/rename images, rewrite globals.css light palette, update layout.tsx fonts
@@ -294,5 +303,31 @@ Plans:
 
 ---
 
+### Phase 6: Website Improvements — gallery, service card images, dark mode, header CTA
+
+**Goal:** Extend the Phase 5 light-aesthetic site with: full background images on service cards with gradient overlay, a gallery preview section on the homepage plus a dedicated /gallery page with lightbox, a dark/light mode toggle (system-aware + localStorage + manual override), a WhatsApp CTA button in the header, and additional real photography integrated contextually throughout existing sections. All visible text in Brazilian Portuguese.
+**Requirements**: IMP-IMAGES, IMP-SERVICE-CARDS, IMP-GALLERY, IMP-DARKMODE, IMP-HEADER-CTA, IMP-FONT-FIX, IMP-MOBILE-NAV
+**Depends on:** Phase 5
+**Plans:** 5 plans
+
+Plans:
+- [ ] 06-01-PLAN.md — Dark mode foundation: CSS tokens, ThemeToggle component, FOUC prevention
+- [ ] 06-02-PLAN.md — Header restructure: grid layout, WhatsApp CTA, mobile drawer fix
+- [ ] 06-03-PLAN.md — Service card background images + highlight font fix
+- [ ] 06-04-PLAN.md — Gallery: constants update, preview section, /gallery page, lightbox
+- [ ] 06-05-PLAN.md — Dark mode polish + build gate
+
+**Success Criteria** (what must be TRUE):
+  1. Each of the three service cards has a full background image with gradient overlay — text remains legible (WCAG AA contrast)
+  2. Gallery preview section appears on homepage showing 6 images in a responsive grid
+  3. Clicking a gallery image opens a lightbox (keyboard-navigable, focus-trapped)
+  4. /gallery page exists and shows all 14 available images
+  5. Dark/light mode toggle in header — system preference is default, user override persists in localStorage
+  6. Header includes a WhatsApp CTA button ("Entrar em Contato")
+  7. All new text is in Brazilian Portuguese
+  8. `pnpm build` exits with code 0
+
+---
+
 *Roadmap created: 2026-04-13*
-*Last updated: 2026-04-14 after Phase 5 planning*
+*Last updated: 2026-04-15 after Phase 6 planning*
