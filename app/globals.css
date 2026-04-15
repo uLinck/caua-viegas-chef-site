@@ -2,15 +2,17 @@
 
 /* CSS custom properties for var() usage in CSS Modules */
 :root {
-  --color-background: #0A0A0A;
-  --color-surface: #141414;
-  --color-surface-hover: #1C1C1C;
-  --color-border: #2A2A2A;
-  --color-text-primary: #F5F0E8;
-  --color-text-secondary: #A39E93;
-  --color-primary: #C4A265;
-  --color-primary-hover: #D4B67A;
-  --color-accent: #8B3A3A;
+  --color-background: #F8F4EF;
+  --color-surface: #EDE8E0;
+  --color-surface-hover: #E4DDD4;
+  --color-border: rgba(44, 44, 44, 0.12);
+  --color-divider: #C9A96E;
+  --color-text-primary: #2C2C2C;
+  --color-text-secondary: #5A5550;
+  --color-text-muted: #8A847D;
+  --color-primary: #A03030;
+  --color-primary-hover: #8B2626;
+  --color-accent: #C9A96E;
   --color-whatsapp: #25D366;
 }
 
@@ -21,14 +23,19 @@
   --color-surface: var(--color-surface);
   --color-surface-hover: var(--color-surface-hover);
   --color-border: var(--color-border);
+  --color-divider: var(--color-divider);
   --color-text-primary: var(--color-text-primary);
   --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
   --color-primary: var(--color-primary);
   --color-primary-hover: var(--color-primary-hover);
   --color-accent: var(--color-accent);
   --color-whatsapp: var(--color-whatsapp);
   --font-sans: var(--font-inter);
-  --font-display: var(--font-noto-serif-jp);
+  --font-display: var(--font-cormorant);
+  --radius-card: 16px;
+  --radius-button: 12px;
+  --radius-image: 16px;
 }
 
 /* Global base styles */
