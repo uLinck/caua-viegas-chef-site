@@ -1,4 +1,5 @@
 import type { ServiceItem } from '@/types'
+import Image from 'next/image'
 import { WHATSAPP_URL_EVENTOS, WHATSAPP_URL_CONSULTORIA, WHATSAPP_URL_CURSO } from '@/lib/constants'
 import Button from '@/components/ui/Button'
 import styles from './ServiceCard.module.css'
@@ -16,6 +17,16 @@ const ctaUrls: Record<string, string> = {
 export default function ServiceCard({ service }: ServiceCardProps) {
   return (
     <div className={styles.serviceCard}>
+      <Image
+        src={service.imageSrc}
+        alt={service.imageAlt}
+        fill
+        sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+        style={{ objectFit: 'cover', objectPosition: 'center' }}
+        className={styles.cardBgImage}
+        loading="lazy"
+      />
+      <div className={styles.cardOverlay} aria-hidden="true" />
       <h3 className={styles.cardTitle}>{service.title}</h3>
       <span className={styles.cardSubtitle}>{service.subtitle}</span>
       <p className={styles.cardDescription}>{service.description}</p>
