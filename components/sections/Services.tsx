@@ -5,7 +5,7 @@ import styles from './Services.module.css'
 
 export default function Services() {
   return (
-    <section id="servicos" className={styles.servicesSection}>
+    <section id="servicos" className={`${styles.servicesSection} revealOnScroll`}>
       <div className={styles.servicesContainer}>
         <SectionTitle
           eyebrow="SERVIÇOS"

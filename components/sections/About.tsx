@@ -6,7 +6,7 @@ import styles from './About.module.css'
 
 export default function About() {
   return (
-    <section id="sobre" className={styles.aboutSection}>
+    <section id="sobre" className={`${styles.aboutSection} revealOnScroll`}>
       <div className={styles.aboutContainer}>
         <div className={styles.aboutGrid}>
           {/* LEFT column: portrait */}

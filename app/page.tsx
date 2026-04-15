@@ -10,10 +10,12 @@ export default function Home() {
       <Header />
       <main id="main-content">
         <Hero />
+        <hr className="sectionDivider" aria-hidden="true" />
         <About />
+        <hr className="sectionDivider" aria-hidden="true" />
         <Services />
-        <Footer />
       </main>
+      <Footer />
     </>
   )
 }
