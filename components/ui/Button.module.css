@@ -2,21 +2,33 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 24px;
+  padding: 14px 28px;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.05em;
-  border-radius: 2px;
+  border-radius: var(--radius-button, 12px);
   border: none;
   cursor: pointer;
   text-decoration: none;
   min-height: 44px;
-  transition: background-color 0.2s ease, border-color 0.2s ease, filter 0.2s ease;
+  transition: background-color 300ms ease-in-out,
+              transform 300ms ease-in-out,
+              box-shadow 300ms ease-in-out,
+              border-color 300ms ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.button:active {
+  transform: scale(0.98);
 }
 
 .primary {
   background-color: var(--color-primary);
-  color: var(--color-background);
+  color: #FFFFFF;
 }
 
 .primary:hover {
@@ -25,12 +37,12 @@
 
 .whatsapp {
   background-color: var(--color-whatsapp);
-  color: var(--color-background);
+  color: #FFFFFF;
   width: 100%;
 }
 
 .whatsapp:hover {
-  filter: brightness(0.9);
+  filter: brightness(0.92);
 }
 
 .ghost {
@@ -40,10 +52,19 @@
 }
 
 .ghost:hover {
-  background-color: var(--color-surface-hover);
+  background-color: var(--color-surface);
 }
 
 .button:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+  .button:hover {
+    transform: none;
+  }
 }
