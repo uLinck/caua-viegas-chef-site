@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 06-03-PLAN.md
-last_updated: "2026-04-15T11:14:19.226Z"
+stopped_at: Completed 06-04-PLAN.md
+last_updated: "2026-04-15T11:17:37.771Z"
 last_activity: 2026-04-15
 progress:
   total_phases: 6
   completed_phases: 3
   total_plans: 17
-  completed_plans: 15
-  percent: 88
+  completed_plans: 16
+  percent: 94
 ---
 
 # Project State
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 2026-04-14)
 ## Current Position
 
 Phase: 06 (website-improvements) — EXECUTING
-Plan: 4 of 5
+Plan: 5 of 5
 Status: Ready to execute
 Last activity: 2026-04-15
 
@@ -61,6 +61,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 06-website-improvements P01 | 15min | 2 tasks | 4 files |
 | Phase 06-website-improvements P02 | 6 min | 2 tasks | 2 files |
 | Phase 06 P03 | 2 min | 2 tasks | 4 files |
+| Phase 06-website-improvements P04 | 15 min | 2 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -106,6 +107,7 @@ Decisions are logged in PROJECT.md Key Decisions table.
 - [Phase 06-website-improvements]: color-mix() for dark-mode-safe header scrolled background instead of hardcoded rgba
 - [Phase 06]: Service cards use self-contained overlay (no theme tokens for contrast) — identical appearance in light and dark mode
 - [Phase 06]: cardHighlight drops font-family entirely so Inter cascades naturally; color and border-left provide emphasis
+- [Phase 06-website-improvements]: allItems prop passes all 14 images to GalleryClient lightbox even when grid shows only 6 preview items
 
 ### Pending Todos
 
@@ -118,8 +120,8 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-15T11:14:19.222Z
-Stopped at: Completed 06-03-PLAN.md
+Last session: 2026-04-15T11:17:37.767Z
+Stopped at: Completed 06-04-PLAN.md
 Resume file: None
 
 **Next step:** Run `/gsd-plan-phase 1` to start planning Phase 1 (Foundation)
