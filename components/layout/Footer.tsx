@@ -4,11 +4,11 @@ import styles from './Footer.module.css'
 
 export default function Footer() {
   return (
-    <footer className={styles.footerWrapper}>
+    <footer className={`${styles.footerWrapper} revealOnScroll`}>
       <div className={styles.footerContent}>
         <p className={styles.brand}>
-          <span className={styles.brandName}>CAUÃ VIEGAS</span>
-          {' \u2014 '}Personal Chef
+          <span className={styles.brandName}>Cauã Viegas</span>
+          {' — '}Personal Chef · Gastronomia Japonesa
         </p>
         <SocialIcons
           instagramUrl={INSTAGRAM_URL}
