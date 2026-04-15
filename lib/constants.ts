@@ -38,13 +38,22 @@ export const STAT_ITEMS: StatItem[] = [
   { value: '50k+', label: 'Alcance Mensal' },
 ]
 
-// Gallery items (4:3 aspect ratio)
+// Gallery items — all 14 real photos from public/images/
 export const GALLERY_ITEMS: GalleryItem[] = [
-  { id: 'gallery-1', src: '/images/gallery-01.jpg', alt: 'Sushi premium preparado pelo Chef Cauã Viegas', width: 800, height: 600 },
-  { id: 'gallery-2', src: '/images/gallery-02.jpg', alt: 'Prato de sashimi com apresentação artística', width: 800, height: 600 },
-  { id: 'gallery-3', src: '/images/gallery-03.jpg', alt: 'Evento exclusivo de gastronomia japonesa', width: 800, height: 600 },
-  { id: 'gallery-4', src: '/images/gallery-04.jpg', alt: 'Detalhes de técnica de corte japonês', width: 800, height: 600 },
-  { id: 'gallery-5', src: '/images/gallery-05.jpg', alt: 'Mesa completa de experiência omakase', width: 800, height: 600 },
+  { id: 'gallery-1', src: '/images/food-table-1.jpeg', alt: 'Mesa de gastronomia japonesa em evento exclusivo', width: 800, height: 600 },
+  { id: 'gallery-2', src: '/images/food-table-2.jpeg', alt: 'Apresentação artística de pratos japoneses', width: 800, height: 600 },
+  { id: 'gallery-3', src: '/images/chef-event-1.jpeg', alt: 'Chef Cauã Viegas em ação durante evento', width: 800, height: 600 },
+  { id: 'gallery-4', src: '/images/chef-cooking-1.jpeg', alt: 'Preparo de prato em cozinha profissional', width: 800, height: 600 },
+  { id: 'gallery-5', src: '/images/rice-detail.jpeg', alt: 'Detalhe do arroz shari preparado artesanalmente', width: 800, height: 600 },
+  { id: 'gallery-6', src: '/images/three-fishes.jpg', alt: 'Seleção de peixes frescos para sashimi', width: 800, height: 600 },
+  { id: 'gallery-7', src: '/images/food-table-3.jpeg', alt: 'Variedade de sushis e sashimis servidos', width: 800, height: 600 },
+  { id: 'gallery-8', src: '/images/chef-event-2.jpeg', alt: 'Momento especial em evento gastronômico', width: 800, height: 600 },
+  { id: 'gallery-9', src: '/images/chef-cooking-2.jpg', alt: 'Técnica de corte preciso de peixe', width: 800, height: 600 },
+  { id: 'gallery-10', src: '/images/chef-bowl.jpg', alt: 'Chef Cauã Viegas com tigela de ingredientes', width: 800, height: 600 },
+  { id: 'gallery-11', src: '/images/food-table-4.jpg', alt: 'Mesa completa de experiência omakase', width: 800, height: 600 },
+  { id: 'gallery-12', src: '/images/students-certificates.jpg', alt: 'Alunos do curso de sushi com certificados', width: 800, height: 600 },
+  { id: 'gallery-13', src: '/images/hero-bg.jpeg', alt: 'Gastronomia japonesa de alto padrão', width: 800, height: 600 },
+  { id: 'gallery-14', src: '/images/about-chef.jpg', alt: 'Retrato do Chef Cauã Viegas', width: 800, height: 600 },
 ]
 
 // Service items (3 services)
