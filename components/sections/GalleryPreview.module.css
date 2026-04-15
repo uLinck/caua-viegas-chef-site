@@ -1,0 +1,22 @@
+.gallerySection {
+  padding: 96px 0;
+  background-color: var(--color-background);
+}
+
+@media (max-width: 767px) {
+  .gallerySection {
+    padding: 64px 0;
+  }
+}
+
+.galleryContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.ctaWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}

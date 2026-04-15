@@ -1,0 +1,19 @@
+.galleryMain {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  background-color: var(--color-background);
+  min-height: 100vh;
+}
+
+.galleryPageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 767px) {
+  .galleryMain {
+    padding-top: 80px;
+    padding-bottom: 64px;
+  }
+}

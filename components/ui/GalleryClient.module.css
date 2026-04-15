@@ -1,0 +1,63 @@
+/* Gallery image grid — responsive columns */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Grid item — aspect ratio container for fill image */
+.gridItem {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-image, 16px);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: var(--color-surface);
+}
+
+.gridItem:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.gridImage {
+  transition: transform 400ms ease;
+}
+
+.gridItem:hover .gridImage {
+  transform: scale(1.05);
+}
+
+/* Hover overlay — subtle dark fade on hover */
+.hoverOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 300ms ease;
+  z-index: 1;
+}
+
+.gridItem:hover .hoverOverlay {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gridImage {
+    transition: none;
+  }
+  .gridItem:hover .gridImage {
+    transform: none;
+  }
+  .hoverOverlay {
+    transition: none;
+  }
+}
