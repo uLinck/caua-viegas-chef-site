@@ -1,7 +1,7 @@
 .statCard {
-  background-color: var(--color-surface);
+  background-color: var(--color-background);
   border: 1px solid var(--color-border);
-  border-radius: 2px;
+  border-radius: var(--radius-button, 12px);
   padding: 24px;
 }
 
@@ -10,6 +10,7 @@
 }
 
 .statValue {
+  font-family: var(--font-display, Georgia, serif);
   font-size: 36px;
   font-weight: 700;
   line-height: 1.1;
@@ -18,10 +19,10 @@
 }
 
 .statLabel {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-text-secondary);
+  color: var(--color-text-muted);
   margin-top: 8px;
 }

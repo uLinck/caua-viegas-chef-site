@@ -9,24 +9,25 @@
 }
 
 .eyebrow {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   color: var(--color-primary);
   margin-bottom: 12px;
 }
 
 .heading {
-  font-size: 28px;
-  font-weight: 700;
+  font-family: var(--font-display, Georgia, serif);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 600;
   line-height: 1.2;
   color: var(--color-text-primary);
 }
 
 .rule {
-  width: 40px;
+  width: 48px;
   height: 2px;
-  background-color: var(--color-primary);
-  margin-top: 12px;
+  background-color: var(--color-accent);
+  margin-top: 16px;
 }

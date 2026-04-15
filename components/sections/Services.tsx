@@ -9,7 +9,7 @@ export default function Services() {
       <div className={styles.servicesContainer}>
         <SectionTitle
           eyebrow="SERVIÇOS"
-          heading="O Que Posso Oferecer"
+          heading="O Que Ofereço"
           centered
         />
         <div className={styles.servicesGrid}>
