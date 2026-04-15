@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import { usePathname } from 'next/navigation'
 import { NAV_LINKS, WHATSAPP_URL_FAB } from '@/lib/constants'
 import ThemeToggle from '@/components/ui/ThemeToggle'
 import Button from '@/components/ui/Button'
@@ -10,6 +11,11 @@ import clsx from 'clsx'
 const VISIBLE_HREFS = ['#inicio', '#sobre', '#servicos', '#galeria']
 
 export default function Header() {
+  const pathname = usePathname()
+  const isHome = pathname === '/'
+
+  const resolveHref = (hash: string) => (isHome ? hash : `/${hash}`)
+
   const [isScrolled, setIsScrolled] = useState(false)
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
@@ -49,14 +55,14 @@ export default function Header() {
   return (
     <header className={clsx(styles.header, isScrolled && styles.scrolled)}>
       {/* Left: Logo */}
-      <a href="#inicio" className={styles.logo} onClick={closeDrawer}>
-        CAUÃ VIEGAS
+      <a href={resolveHref('#inicio')} className={styles.logo} onClick={closeDrawer}>
+        CAUÃ VIEGAS 道
       </a>
 
       {/* Center: Desktop nav links */}
       <nav className={styles.desktopNav} aria-label="Navegação principal">
         {visibleLinks.map(link => (
-          <a key={link.href} href={link.href} className={styles.navLink}>
+          <a key={link.href} href={resolveHref(link.href)} className={styles.navLink}>
             {link.label}
           </a>
         ))}
@@ -103,7 +109,7 @@ export default function Header() {
         {visibleLinks.map(link => (
           <a
             key={link.href}
-            href={link.href}
+            href={resolveHref(link.href)}
             className={styles.drawerLink}
             onClick={closeDrawer}
           >

@@ -28,27 +28,33 @@ export default function About() {
           <div className={styles.bioColumn}>
             <SectionTitle
               eyebrow="SOBRE O CHEF"
-              heading="Formado na Tradição, Especializado na Arte"
+              heading="Tradição Japonesa com Técnica e Precisão"
             />
             <div className={styles.bioText}>
               <p>
-                Com mais de 7 anos dedicados à gastronomia japonesa de alto padrão, construí
-                uma reputação baseada em precisão técnica e experiências que transcendem
-                a refeição.
+                Com mais de 7 anos dedicados à gastronomia japonesa de alto
+                padrão, construí minha trajetória com foco em técnica,
+                disciplina e respeito à tradição.
               </p>
               <p>
-                Sou especialista em sushi e técnicas clássicas japonesas. Atendo eventos privados,
-                ofereço consultorias para restaurantes e ministro cursos para quem quer dominar a
-                arte do sushi — sempre com ingredientes premium e apresentação artística.
+                Especialista em sushi e nas bases clássicas da culinária
+                japonesa, atuo em eventos privados, consultorias para
+                restaurantes e cursos voltados à formação técnica — sempre com
+                ingredientes selecionados e execução precisa.
               </p>
               <p>
-                Baseado em Porto Alegre e atuando em todo o Rio Grande do Sul, planejo cada
-                evento individualmente para garantir uma experiência única e inesquecível.
+                Sou de Porto Alegre, mas atuo em todo o Rio Grande do Sul,
+                planejando cada evento individualmente para garantir uma
+                experiência única e inesquecível.
               </p>
             </div>
             <div className={styles.statGrid}>
               {STAT_ITEMS.map((stat) => (
-                <StatCard key={stat.label} value={stat.value} label={stat.label} />
+                <StatCard
+                  key={stat.label}
+                  value={stat.value}
+                  label={stat.label}
+                />
               ))}
             </div>
           </div>

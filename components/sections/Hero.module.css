@@ -9,6 +9,32 @@
   padding-top: 64px;
 }
 
+/* Mobile hero image — hidden on desktop */
+.heroBgMobile {
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .heroBgMobile {
+    display: none;
+  }
+}
+
+/* Desktop hero image — hidden on mobile */
+.heroBgDesktop {
+  object-fit: cover;
+  object-position: center 40%;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .heroBgDesktop {
+    display: block;
+  }
+}
+
 .heroOverlay {
   position: absolute;
   inset: 0;

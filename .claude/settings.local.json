@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node __TRACKED_VAR__/.claude/get-shit-done/bin/gsd-tools.cjs commit 'docs: complete project research' --files .planning/research/)",
+      "Bash(node __TRACKED_VAR__/.claude/get-shit-done/bin/gsd-tools.cjs generate-claude-md --output CLAUDE.md)",
+      "Bash(node __TRACKED_VAR__/.claude/get-shit-done/bin/gsd-tools.cjs commit 'docs: create roadmap \\(4 phases\\)' --files .planning/ROADMAP.md .planning/STATE.md .planning/REQUIREMENTS.md CLAUDE.md)",
+      "Skill(gsd-plan-phase)",
+      "WebSearch",
+      "Skill(gsd-execute-phase)",
+      "Bash(node __TRACKED_VAR__/.claude/get-shit-done/bin/gsd-tools.cjs config-get workflow.use_worktrees)",
+      "Bash(pnpm exec:*)",
+      "Bash(git stash *)",
+      "Bash(git filter-branch --env-filter ' *)",
+      "Skill(gsd-add-phase)",
+      "Bash(pnpm build *)"
+    ]
+  }
+}

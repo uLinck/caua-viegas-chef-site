@@ -5,15 +5,25 @@ import Button from '@/components/ui/Button'
 export default function Hero() {
   return (
     <section className={styles.heroSection} id="inicio">
+      {/* Mobile hero — portrait of chef behind sushi table */}
       <Image
         src="/images/hero-bg.jpeg"
         alt="Cauã Viegas - Personal Chef preparando gastronomia japonesa"
         fill
-        style={{ objectFit: 'cover', objectPosition: 'center top' }}
+        className={styles.heroBgMobile}
         sizes="100vw"
         preload={true}
         fetchPriority="high"
         loading="eager"
+      />
+      {/* Desktop hero — moody kitchen scene with sushi in foreground */}
+      <Image
+        src="/images/chef-cooking-hero.png"
+        alt="Cauã Viegas - Personal Chef preparando gastronomia japonesa"
+        fill
+        className={styles.heroBgDesktop}
+        sizes="100vw"
+        loading="lazy"
       />
       <div className={styles.heroOverlay} aria-hidden="true" />
       <div className={styles.heroContent}>
