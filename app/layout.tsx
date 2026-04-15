@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Noto_Serif_JP } from 'next/font/google'
+import { Cormorant_Garamond, Inter } from 'next/font/google'
 import './globals.css'
 import styles from './layout.module.css'
 import { TELEPHONE, EMAIL, INSTAGRAM_URL } from '@/lib/constants'
@@ -10,16 +10,17 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const notoSerifJP = Noto_Serif_JP({
+const cormorantGaramond = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
   display: 'swap',
-  variable: '--font-noto-serif-jp',
+  variable: '--font-cormorant',
 })
 
 export const viewport: Viewport = {
-  themeColor: '#141414',
-  colorScheme: 'dark',
+  themeColor: '#F8F4EF',
+  colorScheme: 'light',
 }
 
 export const metadata: Metadata = {
@@ -79,7 +80,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${notoSerifJP.variable}`}>
+    <html lang="pt-BR" className={`${cormorantGaramond.variable} ${inter.variable}`}>
       <body>
         <a href="#main-content" className={styles.skipLink}>
           Pular para o conteúdo principal
