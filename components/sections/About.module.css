@@ -1,6 +1,6 @@
 .aboutSection {
   padding: 96px 0;
-  background-color: var(--color-background);
+  background-color: var(--color-surface);
 }
 
 @media (max-width: 767px) {
@@ -23,9 +23,26 @@
 
 @media (min-width: 1024px) {
   .aboutGrid {
-    grid-template-columns: 1fr 360px;
+    grid-template-columns: 400px 1fr;
     gap: 64px;
   }
+}
+
+.portraitColumn {
+  display: flex;
+  align-items: flex-start;
+}
+
+.portraitWrapper {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-image, 16px);
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.portraitImage {
+  border-radius: var(--radius-image, 16px);
 }
 
 .bioColumn {
@@ -43,7 +60,7 @@
 .bioText p {
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--color-text-secondary);
   margin: 0;
 }
@@ -59,16 +76,4 @@
   .statGrid {
     grid-template-columns: 1fr;
   }
-}
-
-.portraitColumn {
-  display: flex;
-  align-items: flex-start;
-}
-
-.portraitWrapper {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  overflow: hidden;
-  width: 100%;
 }
