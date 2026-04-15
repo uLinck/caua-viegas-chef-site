@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 06-website-improvements-01-PLAN.md
-last_updated: "2026-04-15T11:10:57.705Z"
+stopped_at: Completed 06-03-PLAN.md
+last_updated: "2026-04-15T11:14:19.226Z"
 last_activity: 2026-04-15
 progress:
   total_phases: 6
   completed_phases: 3
   total_plans: 17
-  completed_plans: 13
-  percent: 76
+  completed_plans: 15
+  percent: 88
 ---
 
 # Project State
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 2026-04-14)
 ## Current Position
 
 Phase: 06 (website-improvements) — EXECUTING
-Plan: 2 of 5
+Plan: 4 of 5
 Status: Ready to execute
 Last activity: 2026-04-15
 
@@ -59,6 +59,8 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 05 P05-04 | 5 | 2 tasks | 6 files |
 | Phase 05 P05-05 | 5 | 3 tasks | 6 files |
 | Phase 06-website-improvements P01 | 15min | 2 tasks | 4 files |
+| Phase 06-website-improvements P02 | 6 min | 2 tasks | 2 files |
+| Phase 06 P03 | 2 min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -101,6 +103,9 @@ Decisions are logged in PROJECT.md Key Decisions table.
 - [Phase 05]: Footer moved outside main in page.tsx — footer is not main content, semantic HTML correction
 - [Phase 05]: Hero excluded from revealOnScroll — Hero has its own CSS entrance animation; scroll-driven animation would conflict
 - [Phase 06-website-improvements]: Dark mode uses data-theme attribute on html element; FOUC script owns system preference detection so no CSS media query needed; primary color flips red-to-gold between light and dark modes
+- [Phase 06-website-improvements]: color-mix() for dark-mode-safe header scrolled background instead of hardcoded rgba
+- [Phase 06]: Service cards use self-contained overlay (no theme tokens for contrast) — identical appearance in light and dark mode
+- [Phase 06]: cardHighlight drops font-family entirely so Inter cascades naturally; color and border-left provide emphasis
 
 ### Pending Todos
 
@@ -113,8 +118,8 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-15T11:10:53.959Z
-Stopped at: Completed 06-website-improvements-01-PLAN.md
+Last session: 2026-04-15T11:14:19.222Z
+Stopped at: Completed 06-03-PLAN.md
 Resume file: None
 
 **Next step:** Run `/gsd-plan-phase 1` to start planning Phase 1 (Foundation)
