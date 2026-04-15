@@ -315,7 +315,7 @@ Plans:
 - [x] 06-02-PLAN.md — Header restructure: grid layout, WhatsApp CTA, mobile drawer fix
 - [x] 06-03-PLAN.md — Service card background images + highlight font fix
 - [x] 06-04-PLAN.md — Gallery: constants update, preview section, /gallery page, lightbox
-- [ ] 06-05-PLAN.md — Dark mode polish + build gate
+- [x] 06-05-PLAN.md — Dark mode polish + build gate
 
 **Success Criteria** (what must be TRUE):
   1. Each of the three service cards has a full background image with gradient overlay — text remains legible (WCAG AA contrast)
