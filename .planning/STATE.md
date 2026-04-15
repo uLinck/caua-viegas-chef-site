@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 05-05-PLAN.md
-last_updated: "2026-04-15T03:16:07.544Z"
+stopped_at: Completed 06-website-improvements-01-PLAN.md
+last_updated: "2026-04-15T11:10:57.705Z"
 last_activity: 2026-04-15
 progress:
-  total_phases: 5
+  total_phases: 6
   completed_phases: 3
-  total_plans: 12
-  completed_plans: 12
-  percent: 100
+  total_plans: 17
+  completed_plans: 13
+  percent: 76
 ---
 
 # Project State
@@ -21,12 +21,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-14)
 
 **Core value:** Convert visitors into clients by projecting premium positioning through a dark Japanese aesthetic, eliminating all friction between interest and WhatsApp contact.
-**Current focus:** Phase 05 — full-visual-redesign-japanese-aesthetic-header-nav-real-imag
+**Current focus:** Phase 06 — website-improvements
 
 ## Current Position
 
-Phase: 05 (full-visual-redesign-japanese-aesthetic-header-nav-real-imag) — EXECUTING
-Plan: 5 of 5
+Phase: 06 (website-improvements) — EXECUTING
+Plan: 2 of 5
 Status: Ready to execute
 Last activity: 2026-04-15
 
@@ -58,6 +58,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 05 P05-02 | 2 | 2 tasks | 3 files |
 | Phase 05 P05-04 | 5 | 2 tasks | 6 files |
 | Phase 05 P05-05 | 5 | 3 tasks | 6 files |
+| Phase 06-website-improvements P01 | 15min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -99,6 +100,7 @@ Decisions are logged in PROJECT.md Key Decisions table.
 - [Phase 05]: Individual animation sub-properties used inside @supports block — animation shorthand resets animation-timeline to auto
 - [Phase 05]: Footer moved outside main in page.tsx — footer is not main content, semantic HTML correction
 - [Phase 05]: Hero excluded from revealOnScroll — Hero has its own CSS entrance animation; scroll-driven animation would conflict
+- [Phase 06-website-improvements]: Dark mode uses data-theme attribute on html element; FOUC script owns system preference detection so no CSS media query needed; primary color flips red-to-gold between light and dark modes
 
 ### Pending Todos
 
@@ -111,8 +113,8 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-15T03:16:07.540Z
-Stopped at: Completed 05-05-PLAN.md
+Last session: 2026-04-15T11:10:53.959Z
+Stopped at: Completed 06-website-improvements-01-PLAN.md
 Resume file: None
 
 **Next step:** Run `/gsd-plan-phase 1` to start planning Phase 1 (Foundation)
