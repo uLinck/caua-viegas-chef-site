@@ -276,9 +276,9 @@ Phases execute in strict numeric order: 1 → 2 → 3 → 4 → 5
 Plans:
 - [x] 05-01-PLAN.md — Foundation: copy/rename images, rewrite globals.css light palette, update layout.tsx fonts
 - [x] 05-02-PLAN.md — Header: sticky nav, mobile hamburger drawer, scroll-aware frosted glass
-- [ ] 05-03-PLAN.md — Hero + About: real images, entrance animation, flipped About layout, first-person copy
+- [x] 05-03-PLAN.md — Hero + About: real images, entrance animation, flipped About layout, first-person copy
 - [x] 05-04-PLAN.md — Services + UI atoms: rounded corners, hover effects, light palette, Cormorant Garamond
-- [ ] 05-05-PLAN.md — Footer + scroll animations + dividers + build gate
+- [x] 05-05-PLAN.md — Footer + scroll animations + dividers + build gate
 
 **Success Criteria** (what must be TRUE):
   1. Page background is #F8F4EF (warm off-white), not #0A0A0A (old dark)
