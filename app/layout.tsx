@@ -19,8 +19,11 @@ const cormorantGaramond = Cormorant_Garamond({
 })
 
 export const viewport: Viewport = {
-  themeColor: '#F8F4EF',
-  colorScheme: 'light',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#F8F4EF' },
+    { media: '(prefers-color-scheme: dark)', color: '#0F0F0D' },
+  ],
+  colorScheme: 'light dark',
 }
 
 export const metadata: Metadata = {
@@ -80,11 +83,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR" className={`${cormorantGaramond.variable} ${inter.variable}`}>
+    <html lang="pt-BR" className={`${cormorantGaramond.variable} ${inter.variable}`} suppressHydrationWarning>
       <body>
         <a href="#main-content" className={styles.skipLink}>
           Pular para o conteúdo principal
         </a>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');var d=t==='dark'||t==='light'?t:window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',d);}catch(e){}})();`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

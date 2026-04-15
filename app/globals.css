@@ -1,7 +1,41 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 /* CSS custom properties for var() usage in CSS Modules */
 :root {
+  --color-background: #F8F4EF;
+  --color-surface: #EDE8E0;
+  --color-surface-hover: #E4DDD4;
+  --color-border: rgba(44, 44, 44, 0.12);
+  --color-divider: #C9A96E;
+  --color-text-primary: #2C2C2C;
+  --color-text-secondary: #5A5550;
+  --color-text-muted: #8A847D;
+  --color-primary: #A03030;
+  --color-primary-hover: #8B2626;
+  --color-accent: #C9A96E;
+  --color-whatsapp: #25D366;
+}
+
+/* Dark mode palette — intentional dark backgrounds with warm accent tones */
+[data-theme="dark"] {
+  --color-background: #0F0F0D;
+  --color-surface: #1A1916;
+  --color-surface-hover: #252420;
+  --color-border: rgba(201, 169, 110, 0.15);
+  --color-divider: #C9A96E;
+  --color-text-primary: #F0EBE3;
+  --color-text-secondary: #A8A29A;
+  --color-text-muted: #6B6560;
+  --color-primary: #C9A96E;
+  --color-primary-hover: #DDB97E;
+  --color-accent: #C9A96E;
+  --color-whatsapp: #25D366;
+}
+
+/* Explicit light override — forces light even if prefers-color-scheme is dark */
+[data-theme="light"] {
   --color-background: #F8F4EF;
   --color-surface: #EDE8E0;
   --color-surface-hover: #E4DDD4;
