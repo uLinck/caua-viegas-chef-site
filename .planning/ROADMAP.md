@@ -173,10 +173,30 @@ Plans:
 
 ---
 
+### Phase 7: Consultoria de Pescados — 4th service card
+
+**Goal:** Add a fourth service card "Consultoria de Pescados" to the Services section. The card joins Eventos, Consultoria, and Curso in a responsive grid (4-col desktop / 2-col tablet / 1-col mobile). It includes a gold badge "Especializado" and a CSS-only hover panel revealing the "Maturação de Pescados" technique. ServiceCard stays a Server Component. Build passes.
+**Requirements**: PESCADOS-01, PESCADOS-02, PESCADOS-03, PESCADOS-04, PESCADOS-05, PESCADOS-06
+**Depends on:** Phase 6
+**Plans:** 1 plan
+
+Plans:
+- [x] 07-01-PLAN.md — Types + constants + ServiceCard component + CSS grid update + build gate
+
+**Success Criteria** (what must be TRUE):
+  1. Services section shows 4 cards; desktop grid is 4 columns, tablet 2 columns, mobile 1 column
+  2. Pescados card displays gold badge "Especializado" at top of content area
+  3. Hovering the pescados card reveals "Maturação de Pescados" panel — no JavaScript involved
+  4. Clicking "Falar com o Consultor" opens WhatsApp with the correct pescados-specific message
+  5. Existing three cards (Eventos, Consultoria, Curso) are visually unchanged
+  6. `pnpm build` exits 0 with no TypeScript errors
+
+---
+
 ## Progress
 
 **Execution Order:**
-Phases execute in strict numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
+Phases execute in strict numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -186,6 +206,7 @@ Phases execute in strict numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | 4. QA & Launch | 0/3 | Not started | - |
 | 5. Visual Redesign | 5/5 | Complete   | 2026-04-15 |
 | 6. Website Improvements | 0/5 | Not started | - |
+| 7. Consultoria de Pescados | 0/1 | Not started | - |
 
 ---
 

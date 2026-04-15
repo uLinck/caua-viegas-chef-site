@@ -6,12 +6,9 @@ export interface ServiceItem {
   highlight: string
   items: string[]
   ctaLabel: string
-  messageKey: 'fab' | 'eventos' | 'consultoria' | 'curso' | 'pescados'
+  messageKey: 'fab' | 'eventos' | 'consultoria' | 'curso'
   imageSrc: string
   imageAlt: string
-  badge?: string
-  maturationTitle?: string
-  maturationDescription?: string
 }
 
 export interface GalleryItem {

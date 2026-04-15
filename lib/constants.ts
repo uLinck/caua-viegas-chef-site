@@ -14,7 +14,6 @@ export const WHATSAPP_MESSAGES = {
   eventos: 'Olá, Cauã! Tenho interesse em contratar você para um Evento Exclusivo. Poderia me passar mais informações sobre disponibilidade e proposta?',
   consultoria: 'Olá, Cauã! Gostaria de saber mais sobre a Consultoria em Gastronomia Japonesa. Como funciona o processo?',
   curso: 'Olá, Cauã! Tenho interesse no Curso Introdutório de Sushi. Quais são as datas disponíveis e como faço para me inscrever?',
-  pescados: 'Olá, Cauã! Gostaria de saber mais sobre a Consultoria de Pescados. Como funciona o processo de análise e seleção para restaurantes?',
 } as const
 
 // Pre-built WhatsApp URLs
@@ -22,7 +21,6 @@ export const WHATSAPP_URL_FAB = buildWhatsAppUrl(WHATSAPP_NUMBER, WHATSAPP_MESSA
 export const WHATSAPP_URL_EVENTOS = buildWhatsAppUrl(WHATSAPP_NUMBER, WHATSAPP_MESSAGES.eventos)
 export const WHATSAPP_URL_CONSULTORIA = buildWhatsAppUrl(WHATSAPP_NUMBER, WHATSAPP_MESSAGES.consultoria)
 export const WHATSAPP_URL_CURSO = buildWhatsAppUrl(WHATSAPP_NUMBER, WHATSAPP_MESSAGES.curso)
-export const WHATSAPP_URL_PESCADOS = buildWhatsAppUrl(WHATSAPP_NUMBER, WHATSAPP_MESSAGES.pescados)
 
 // Navigation links (proper Portuguese accents in labels; ASCII-only in hrefs)
 export const NAV_LINKS: NavLink[] = [
@@ -110,26 +108,5 @@ export const SERVICE_ITEMS: ServiceItem[] = [
     messageKey: 'curso',
     imageSrc: '/images/students-certificates.jpg',
     imageAlt: 'Alunos com certificados após curso de sushi com o Chef Cauã Viegas',
-  },
-  {
-    id: 'pescados',
-    title: 'Consultoria de Pescados',
-    subtitle: 'Qualidade, técnica e estratégia para elevar seu cardápio',
-    description: 'Atuação especializada na seleção, análise e aplicação de pescados de alto padrão para restaurantes. Mais do que fornecer peixe, o foco é atuar como consultor estratégico, ajudando na escolha dos melhores produtos, identificação de melhorias no CMV e desenvolvimento de um cardápio mais rentável e atrativo.',
-    highlight: 'Suporte técnico na utilização de pescados como atum e peixes brancos, garantindo melhor desempenho, sabor e experiência final ao cliente.',
-    items: [
-      'Classificação profissional de pescados (cor, textura e qualidade)',
-      'Especialização em atum de alto padrão',
-      'Consultoria estratégica para cardápio e CMV',
-      'Curadoria de produtos com foco em performance e sabor',
-      'Experiência direta com indústria e fornecimento',
-    ],
-    ctaLabel: 'Falar com o Consultor',
-    messageKey: 'pescados',
-    imageSrc: '/images/three-fishes.jpg',
-    imageAlt: 'Seleção de pescados de alto padrão para consultoria gastronômica',
-    badge: 'Especializado',
-    maturationTitle: 'Maturação de Pescados',
-    maturationDescription: 'Técnica avançada em ambiente controlado que intensifica sabor, melhora textura e eleva o nível do produto final.',
   },
 ]
