@@ -6,28 +6,33 @@ export default function Hero() {
   return (
     <section className={styles.heroSection} id="inicio">
       <Image
-        src="/images/hero-bg.jpg"
+        src="/images/hero-bg.jpeg"
         alt="Cauã Viegas - Personal Chef preparando gastronomia japonesa"
         fill
-        style={{ objectFit: 'cover' }}
+        style={{ objectFit: 'cover', objectPosition: 'center top' }}
         sizes="100vw"
         preload={true}
+        fetchPriority="high"
+        loading="eager"
       />
       <div className={styles.heroOverlay} aria-hidden="true" />
-      <span className={styles.kanji} aria-hidden="true">道</span>
       <div className={styles.heroContent}>
-        <span className={styles.eyebrow}>PERSONAL CHEF — GASTRONOMIA JAPONESA</span>
+        <span className={styles.eyebrow}>PERSONAL CHEF &#8212; GASTRONOMIA JAPONESA</span>
         <h1 className={styles.heading}>
-          Cauã Viegas
+          <span className={styles.headingLine}>PERSONAL CHEF</span>
+          <span className={styles.headingLine}>CAUÃ VIEGAS</span>
         </h1>
         <p className={styles.tagline}>
-          Da tradição japonesa à sua mesa — experiências gastronômicas únicas em Porto Alegre e todo o RS.
+          Levo experiências gastronômicas únicas para a intimidade da sua casa.
         </p>
         <div className={styles.ctaWrapper}>
-          <Button href="#contact" variant="primary">
-            Solicitar Experiência
+          <Button href="#servicos" variant="primary">
+            Conhecer Serviços
           </Button>
         </div>
+      </div>
+      <div className={styles.decorativeLine} aria-hidden="true">
+        <span className={styles.kanji}>道</span>
       </div>
     </section>
   )
