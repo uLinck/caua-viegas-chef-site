@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: verifying
+status: executing
 stopped_at: Completed 07-consultoria-pescados-01-PLAN.md
-last_updated: "2026-04-15T16:36:08.435Z"
-last_activity: 2026-04-15
+last_updated: "2026-04-16T11:55:36.906Z"
+last_activity: 2026-04-16 - Completed quick task 260416-j7l: Add scroll animations (number count-up on stats, scroll-reveal cards) and fix dark theme hero text color
 progress:
-  total_phases: 7
+  total_phases: 8
   completed_phases: 5
-  total_plans: 18
+  total_plans: 19
   completed_plans: 18
-  percent: 100
+  percent: 95
 ---
 
 # Project State
@@ -21,14 +21,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-14)
 
 **Core value:** Convert visitors into clients by projecting premium positioning through a dark Japanese aesthetic, eliminating all friction between interest and WhatsApp contact.
-**Current focus:** Phase 06 — website-improvements
+**Current focus:** Phase 08 — ui-contrast-visibility-fixes
 
 ## Current Position
 
-Phase: 06 (website-improvements) — EXECUTING
-Plan: 5 of 5
-Status: Phase complete — ready for verification
-Last activity: 2026-04-15
+Phase: 08 (ui-contrast-visibility-fixes) — EXECUTING
+Plan: 1 of 1
+Status: Executing Phase 08
+Last activity: 2026-04-16 -- Phase 08 execution started
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -118,6 +118,15 @@ Decisions are logged in PROJECT.md Key Decisions table.
 ### Pending Todos
 
 None yet.
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 260416-i8u | Phase 8 UAT CSS fixes: stronger card overlay, white hero title text, remove header white gradient | 2026-04-16 | b10eaed | [260416-i8u-phase-8-uat-css-fixes-stronger-card-over](.planning/quick/260416-i8u-phase-8-uat-css-fixes-stronger-card-over/) |
+| 260416-ioj | Fix light-theme header at scroll 0: transparent bg, white nav links like dark theme, no border | 2026-04-16 | 217402c | [260416-ioj-fix-light-theme-header-at-scroll-0-trans](.planning/quick/260416-ioj-fix-light-theme-header-at-scroll-0-trans/) |
+| 260416-iu5 | Mobile hero: remove scrim, push text lower, add text-shadow | 2026-04-16 | bd4e451 | [260416-iu5-mobile-hero-remove-scrim-push-text-lower](.planning/quick/260416-iu5-mobile-hero-remove-scrim-push-text-lower/) |
+| 260416-j7l | Dark hero text fix, stat count-up animation, staggered service card scroll-reveal | 2026-04-16 | 2077ab9 | [260416-j7l-add-scroll-animations-number-count-up-on](.planning/quick/260416-j7l-add-scroll-animations-number-count-up-on/) |
 
 ### Blockers/Concerns
 
