@@ -1,6 +1,7 @@
 .servicesSection {
   padding: 96px 0;
   background-color: var(--color-background);
+  overflow-x: hidden;
 }
 
 @media (max-width: 767px) {
@@ -45,10 +46,32 @@
   transform: none;
 }
 
-/* Staggered scroll-reveal per service card */
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Alternating left/right scroll-reveal per service card */
 @supports (animation-timeline: view()) {
   .servicesGrid > * {
-    animation-name: fadeSlideUp;
+    opacity: 0;
     animation-duration: 0.6s;
     animation-timing-function: ease-out;
     animation-fill-mode: both;
@@ -56,13 +79,14 @@
     animation-range: entry 0% cover 35%;
   }
 
-  .servicesGrid > *:nth-child(1) { --stagger-delay: 0ms; }
-  .servicesGrid > *:nth-child(2) { --stagger-delay: 80ms; }
-  .servicesGrid > *:nth-child(3) { --stagger-delay: 160ms; }
-  .servicesGrid > *:nth-child(4) { --stagger-delay: 240ms; }
+  /* Odd cards (1st, 3rd) slide from left */
+  .servicesGrid > *:nth-child(odd) {
+    animation-name: slideFromLeft;
+  }
 
-  .servicesGrid > * {
-    animation-delay: var(--stagger-delay, 0ms);
+  /* Even cards (2nd, 4th) slide from right */
+  .servicesGrid > *:nth-child(even) {
+    animation-name: slideFromRight;
   }
 }
 
