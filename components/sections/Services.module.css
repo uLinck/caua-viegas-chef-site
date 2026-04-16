@@ -40,54 +40,47 @@
   }
 }
 
-/* Fallback: cards always visible on browsers without scroll-driven animation support */
+/* Fallback: cards always visible without JS */
 .servicesGrid > * {
   opacity: 1;
   transform: none;
 }
 
+/* Initial hidden state — set by JS before observation */
+.slideLeft {
+  opacity: 0 !important;
+  transform: translateX(-60px) !important;
+}
+
+.slideRight {
+  opacity: 0 !important;
+  transform: translateX(60px) !important;
+}
+
+/* Keyframes for slide-in */
 @keyframes slideFromLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-60px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes slideFromRight {
-  from {
-    opacity: 0;
-    transform: translateX(60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(60px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
-/* Alternating left/right scroll-reveal per service card */
-@supports (animation-timeline: view()) {
-  .servicesGrid > * {
-    opacity: 0;
-    animation-duration: 0.6s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 35%;
-  }
+/* Animation class — added by JS on intersection */
+.animating {
+  animation-duration: 0.6s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
 
-  /* Odd cards (1st, 3rd) slide from left */
-  .servicesGrid > *:nth-child(odd) {
-    animation-name: slideFromLeft;
-  }
+.slideLeft.animating {
+  animation-name: slideFromLeft;
+}
 
-  /* Even cards (2nd, 4th) slide from right */
-  .servicesGrid > *:nth-child(even) {
-    animation-name: slideFromRight;
-  }
+.slideRight.animating {
+  animation-name: slideFromRight;
 }
 
 @media (prefers-reduced-motion: reduce) {
