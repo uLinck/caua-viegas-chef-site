@@ -262,14 +262,22 @@
   }
 }
 
-/* Light theme: dark-top gradient at scroll position 0 — ensures logo, nav links,
-   ThemeToggle, and CTA are visible against the bright hero photo.
-   Dark-to-transparent gradient provides contrast for any text color without washing out.
-   Uses :not(.scrolled) so it does not compete with the .scrolled frosted-glass rule. */
+/* Light theme at scroll 0: transparent header with white text — identical to dark theme.
+   The hero photo provides the visual backdrop; text must be white to be readable.
+   Uses :not(.scrolled) to avoid competing with the frosted-glass .scrolled rule. */
 [data-theme="light"] .header:not(.scrolled) {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.45) 0%,
-    rgba(0, 0, 0, 0.00) 100%
-  );
+  background: transparent;
+  border-bottom-color: transparent;
+}
+
+[data-theme="light"] .header:not(.scrolled) .logo {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="light"] .header:not(.scrolled) .navLink {
+  color: rgba(255, 255, 255, 0.80);
+}
+
+[data-theme="light"] .header:not(.scrolled) .hamburgerLine {
+  background-color: rgba(255, 255, 255, 0.95);
 }
