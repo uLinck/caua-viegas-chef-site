@@ -5,7 +5,7 @@ milestone_name: milestone
 status: executing
 stopped_at: Completed 07-consultoria-pescados-01-PLAN.md
 last_updated: "2026-04-16T11:55:36.906Z"
-last_activity: 2026-04-16 - Completed quick task 260416-jyo: Hero text animation delayed until background image loads, shorter duration; service cards slide in from left/right on scroll
+last_activity: 2026-04-16 - Completed quick task 260416-kma: fluid animations — expo-out easing, reduced displacement, longer duration
 progress:
   total_phases: 8
   completed_phases: 5
