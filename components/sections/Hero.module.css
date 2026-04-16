@@ -218,3 +218,15 @@
 [data-theme="light"] .tagline {
   color: rgba(255, 255, 255, 0.88);
 }
+
+/* Dark theme: hero heading and tagline forced to white.
+   The dark scrim (heroContent::before, rgba(0,0,0,0.42)) exists behind the text,
+   so the dark-palette cream (#F0EBE3) and gray (#A8A29A) are nearly unreadable.
+   Force white text to match light mode behavior. */
+[data-theme="dark"] .heading {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .tagline {
+  color: rgba(255, 255, 255, 0.88);
+}

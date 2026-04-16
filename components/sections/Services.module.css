@@ -38,3 +38,38 @@
     grid-column: 1 / -1;
   }
 }
+
+/* Fallback: cards always visible on browsers without scroll-driven animation support */
+.servicesGrid > * {
+  opacity: 1;
+  transform: none;
+}
+
+/* Staggered scroll-reveal per service card */
+@supports (animation-timeline: view()) {
+  .servicesGrid > * {
+    animation-name: fadeSlideUp;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+  }
+
+  .servicesGrid > *:nth-child(1) { --stagger-delay: 0ms; }
+  .servicesGrid > *:nth-child(2) { --stagger-delay: 80ms; }
+  .servicesGrid > *:nth-child(3) { --stagger-delay: 160ms; }
+  .servicesGrid > *:nth-child(4) { --stagger-delay: 240ms; }
+
+  .servicesGrid > * {
+    animation-delay: var(--stagger-delay, 0ms);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .servicesGrid > * {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
