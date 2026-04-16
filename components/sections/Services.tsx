@@ -14,8 +14,8 @@ export default function Services() {
     if (!grid) return
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-    const DURATION = 600
-    const STAGGER = [0, 100, 200, 300]
+    const DURATION = 900
+    const STAGGER = [0, 150, 300, 450]
     const children = Array.from(grid.children) as HTMLElement[]
 
     // Set initial hidden state

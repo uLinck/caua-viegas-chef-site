@@ -112,25 +112,25 @@
 
 /* Gate text entrance animations on background image load */
 .heroReady .headingLine {
-  animation: fadeSlideUp 0.4s ease-out forwards;
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .heroReady .headingLine:nth-child(2) {
-  animation-delay: 0.12s;
+  animation-delay: 0.18s;
 }
 
 .heroReady .tagline {
-  animation: fadeSlideUp 0.4s ease-out 0.24s forwards;
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.36s forwards;
 }
 
 .heroReady .ctaWrapper {
-  animation: fadeSlideUp 0.4s ease-out 0.36s forwards;
+  animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.54s forwards;
 }
 
 @keyframes fadeSlideUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
