@@ -1,10 +1,20 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styles from './Hero.module.css'
 import Button from '@/components/ui/Button'
 
 export default function Hero() {
+  const [isReady, setIsReady] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsReady(true), 2000)
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
-    <section className={styles.heroSection} id="inicio">
+    <section className={isReady ? `${styles.heroSection} ${styles.heroReady}` : styles.heroSection} id="inicio">
       {/* Mobile hero — portrait of chef behind sushi table */}
       <Image
         src="/images/hero-bg.jpeg"
@@ -15,6 +25,7 @@ export default function Hero() {
         preload={true}
         fetchPriority="high"
         loading="eager"
+        onLoad={() => setIsReady(true)}
       />
       {/* Desktop hero — moody kitchen scene with sushi in foreground */}
       <Image
@@ -24,6 +35,7 @@ export default function Hero() {
         className={styles.heroBgDesktop}
         sizes="100vw"
         loading="lazy"
+        onLoad={() => setIsReady(true)}
       />
       <div className={styles.heroOverlay} aria-hidden="true" />
       <div className={styles.heroContent}>
