@@ -195,3 +195,15 @@
     display: none;
   }
 }
+
+/* Light theme: hero heading and tagline forced to white.
+   The dark scrim (heroContent::before, rgba(0,0,0,0.42)) exists behind the text,
+   so white text (#ffffff) is correct here. The CSS variables resolve to dark colors
+   in light mode which conflict with the scrim. */
+[data-theme="light"] .heading {
+  color: #ffffff;
+}
+
+[data-theme="light"] .tagline {
+  color: rgba(255, 255, 255, 0.88);
+}
