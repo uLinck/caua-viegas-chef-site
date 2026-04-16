@@ -23,10 +23,6 @@ Inclui suporte técnico na utilização de pescados como atum e peixes brancos, 
 - Curadoria de produtos com foco em performance e sabor
 - Experiência direta com indústria e fornecimento
 
-### Seção complementar (mini destaque dentro do card ou hover)
-**Maturação de Pescados**
-Técnica avançada de maturação em ambiente controlado (temperatura e umidade), que intensifica sabor, melhora textura e eleva o nível do produto final.
-
 ### Imagem sugerida
 - Peixe pendurado em câmara fria (ambiente controlado)
 - Processo de classificação de pescados em indústria
@@ -39,10 +35,6 @@ Técnica avançada de maturação em ambiente controlado (temperatura e umidade)
 - Em tablet: 2x2
 - Em mobile: 1 coluna (stack vertical)
 
-#### Destaque visual
-- Esse card pode ter leve diferenciação:
-  - borda sutil ou glow
-  - ou badge: "Novo" ou "Especializado"
 
 #### Hierarquia
 - Título forte e direto

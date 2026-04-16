@@ -14,6 +14,7 @@ export const WHATSAPP_MESSAGES = {
   eventos: 'Olá, Cauã! Tenho interesse em contratar você para um Evento Exclusivo. Poderia me passar mais informações sobre disponibilidade e proposta?',
   consultoria: 'Olá, Cauã! Gostaria de saber mais sobre a Consultoria em Gastronomia Japonesa. Como funciona o processo?',
   curso: 'Olá, Cauã! Tenho interesse no Curso Introdutório de Sushi. Quais são as datas disponíveis e como faço para me inscrever?',
+  pescados: 'Olá, Cauã! Gostaria de saber mais sobre a Consultoria de Pescados. Como funciona o processo de análise e seleção para restaurantes?',
 } as const
 
 // Pre-built WhatsApp URLs
@@ -21,6 +22,7 @@ export const WHATSAPP_URL_FAB = buildWhatsAppUrl(WHATSAPP_NUMBER, WHATSAPP_MESSA
 export const WHATSAPP_URL_EVENTOS = buildWhatsAppUrl(WHATSAPP_NUMBER, WHATSAPP_MESSAGES.eventos)
 export const WHATSAPP_URL_CONSULTORIA = buildWhatsAppUrl(WHATSAPP_NUMBER, WHATSAPP_MESSAGES.consultoria)
 export const WHATSAPP_URL_CURSO = buildWhatsAppUrl(WHATSAPP_NUMBER, WHATSAPP_MESSAGES.curso)
+export const WHATSAPP_URL_PESCADOS = buildWhatsAppUrl(WHATSAPP_NUMBER, WHATSAPP_MESSAGES.pescados)
 
 // Navigation links (proper Portuguese accents in labels; ASCII-only in hrefs)
 export const NAV_LINKS: NavLink[] = [
@@ -72,7 +74,7 @@ export const SERVICE_ITEMS: ServiceItem[] = [
     ],
     ctaLabel: 'Solicitar Proposta',
     messageKey: 'eventos',
-    imageSrc: '/images/food-table-1.jpeg',
+    imageSrc: '/images/food-table-desktop.png',
     imageAlt: 'Mesa elegante com pratos de gastronomia japonesa em evento exclusivo',
   },
   {
@@ -108,5 +110,23 @@ export const SERVICE_ITEMS: ServiceItem[] = [
     messageKey: 'curso',
     imageSrc: '/images/students-certificates.jpg',
     imageAlt: 'Alunos com certificados após curso de sushi com o Chef Cauã Viegas',
+  },
+  {
+    id: 'pescados',
+    title: 'Consultoria de Pescados',
+    subtitle: 'Qualidade, técnica e estratégia para elevar seu cardápio',
+    description: 'Consultoria especializada em pescados de alto padrão para restaurantes. Atuação como consultor estratégico na seleção dos melhores produtos, melhoria de CMV e desenvolvimento de cardápio mais rentável.',
+    highlight: 'Especialização em atum e peixes brancos — melhor desempenho, sabor e experiência final ao cliente.',
+    items: [
+      'Classificação profissional (cor, textura e qualidade)',
+      'Especialização em atum de alto padrão',
+      'Consultoria estratégica para cardápio e CMV',
+      'Curadoria de produtos com foco em performance',
+    ],
+    ctaLabel: 'Falar com o Consultor',
+    messageKey: 'pescados',
+    imageSrc: '/images/three-fishes.jpg',
+    imageAlt: 'Seleção de pescados de alto padrão para consultoria gastronômica',
+    badge: 'Especializado',
   },
 ]

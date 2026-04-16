@@ -1,6 +1,6 @@
 import type { ServiceItem } from '@/types'
 import Image from 'next/image'
-import { WHATSAPP_URL_EVENTOS, WHATSAPP_URL_CONSULTORIA, WHATSAPP_URL_CURSO } from '@/lib/constants'
+import { WHATSAPP_URL_EVENTOS, WHATSAPP_URL_CONSULTORIA, WHATSAPP_URL_CURSO, WHATSAPP_URL_PESCADOS } from '@/lib/constants'
 import Button from '@/components/ui/Button'
 import styles from './ServiceCard.module.css'
 
@@ -12,6 +12,7 @@ const ctaUrls: Record<string, string> = {
   eventos: WHATSAPP_URL_EVENTOS,
   consultoria: WHATSAPP_URL_CONSULTORIA,
   curso: WHATSAPP_URL_CURSO,
+  pescados: WHATSAPP_URL_PESCADOS,
 }
 
 export default function ServiceCard({ service }: ServiceCardProps) {
@@ -21,12 +22,15 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         src={service.imageSrc}
         alt={service.imageAlt}
         fill
-        sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+        sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 25vw"
         style={{ objectFit: 'cover', objectPosition: 'center' }}
         className={styles.cardBgImage}
         loading="lazy"
       />
       <div className={styles.cardOverlay} aria-hidden="true" />
+      {service.badge && (
+        <span className={styles.cardBadge}>{service.badge}</span>
+      )}
       <h3 className={styles.cardTitle}>{service.title}</h3>
       <span className={styles.cardSubtitle}>{service.subtitle}</span>
       <p className={styles.cardDescription}>{service.description}</p>
