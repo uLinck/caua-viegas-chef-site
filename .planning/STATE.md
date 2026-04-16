@@ -5,7 +5,7 @@ milestone_name: milestone
 status: executing
 stopped_at: Completed 07-consultoria-pescados-01-PLAN.md
 last_updated: "2026-04-16T11:55:36.906Z"
-last_activity: 2026-04-16 - Completed quick task 260416-j7l: Add scroll animations (number count-up on stats, scroll-reveal cards) and fix dark theme hero text color
+last_activity: 2026-04-16 - Completed quick task 260416-jyo: Hero text animation delayed until background image loads, shorter duration; service cards slide in from left/right on scroll
 progress:
   total_phases: 8
   completed_phases: 5
@@ -127,6 +127,7 @@ None yet.
 | 260416-ioj | Fix light-theme header at scroll 0: transparent bg, white nav links like dark theme, no border | 2026-04-16 | 217402c | [260416-ioj-fix-light-theme-header-at-scroll-0-trans](.planning/quick/260416-ioj-fix-light-theme-header-at-scroll-0-trans/) |
 | 260416-iu5 | Mobile hero: remove scrim, push text lower, add text-shadow | 2026-04-16 | bd4e451 | [260416-iu5-mobile-hero-remove-scrim-push-text-lower](.planning/quick/260416-iu5-mobile-hero-remove-scrim-push-text-lower/) |
 | 260416-j7l | Dark hero text fix, stat count-up animation, staggered service card scroll-reveal | 2026-04-16 | 2077ab9 | [260416-j7l-add-scroll-animations-number-count-up-on](.planning/quick/260416-j7l-add-scroll-animations-number-count-up-on/) |
+| 260416-jyo | Hero text animation delayed until background image loads, shorter duration; service cards slide in from left/right on scroll | 2026-04-16 | 4320526 | [260416-jyo-hero-text-animation-delayed-until-backgr](.planning/quick/260416-jyo-hero-text-animation-delayed-until-backgr/) |
 
 ### Blockers/Concerns
 
