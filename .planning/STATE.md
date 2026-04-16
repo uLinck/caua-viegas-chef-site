@@ -128,6 +128,7 @@ None yet.
 | 260416-iu5 | Mobile hero: remove scrim, push text lower, add text-shadow | 2026-04-16 | bd4e451 | [260416-iu5-mobile-hero-remove-scrim-push-text-lower](.planning/quick/260416-iu5-mobile-hero-remove-scrim-push-text-lower/) |
 | 260416-j7l | Dark hero text fix, stat count-up animation, staggered service card scroll-reveal | 2026-04-16 | 2077ab9 | [260416-j7l-add-scroll-animations-number-count-up-on](.planning/quick/260416-j7l-add-scroll-animations-number-count-up-on/) |
 | 260416-jyo | Hero text animation delayed until background image loads, shorter duration; service cards slide in from left/right on scroll | 2026-04-16 | 4320526 | [260416-jyo-hero-text-animation-delayed-until-backgr](.planning/quick/260416-jyo-hero-text-animation-delayed-until-backgr/) |
+| 260416-ka2 | Fix service card slide animation: replace CSS scroll-driven with IntersectionObserver for cross-browser support | 2026-04-16 | 3e39951 | [260416-ka2-fix-service-card-slide-animation-replace](.planning/quick/260416-ka2-fix-service-card-slide-animation-replace/) |
 
 ### Blockers/Concerns
 
