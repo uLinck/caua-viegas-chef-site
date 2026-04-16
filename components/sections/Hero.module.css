@@ -188,6 +188,28 @@
   .decorativeLine::after {
     height: 40px;
   }
+
+  /* Push text toward bottom of photo — avoids overlapping chef's face */
+  .heroSection {
+    align-items: flex-end;
+    padding-bottom: 72px;
+  }
+
+  /* No scrim on mobile — text-shadow handles legibility instead */
+  .heroContent::before {
+    display: none;
+  }
+
+  /* Text shadow replaces scrim for contrast against the photo */
+  .heading {
+    text-shadow:
+      0 2px 16px rgba(0, 0, 0, 0.85),
+      0 1px 4px rgba(0, 0, 0, 0.60);
+  }
+
+  .tagline {
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.80);
+  }
 }
 
 @media (max-width: 480px) {
