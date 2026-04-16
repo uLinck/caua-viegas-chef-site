@@ -192,7 +192,7 @@
   /* Push text toward lower third — avoids overlapping chef's face */
   .heroSection {
     align-items: flex-end;
-    padding-bottom: clamp(120px, 22vh, 220px);
+    padding-bottom: clamp(72px, 12vh, 140px);
   }
 
   /* Text shadow for extra contrast on mobile */
