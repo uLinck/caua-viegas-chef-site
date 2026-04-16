@@ -23,20 +23,20 @@
 }
 
 /* Two-layer overlay: dark vignette + bottom gradient for text legibility
-   Strengthened stops for WCAG AA contrast on all four card background images */
+   Maximum-strength stops for WCAG AA contrast on all four card background images */
 .cardOverlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.88) 0%,
-    rgba(0, 0, 0, 0.70) 40%,
-    rgba(0, 0, 0, 0.50) 75%,
-    rgba(0, 0, 0, 0.30) 100%
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.82) 35%,
+    rgba(0, 0, 0, 0.65) 65%,
+    rgba(0, 0, 0, 0.42) 100%
   );
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border-radius: var(--radius-card, 16px);
 }
 
