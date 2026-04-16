@@ -261,3 +261,14 @@
     transition: none;
   }
 }
+
+/* Light theme: subtle top gradient when NOT scrolled — ensures header elements
+   are visible against the hero photo before frosted-glass activates.
+   Uses :not(.scrolled) so it does not compete with the .scrolled frosted-glass rule. */
+[data-theme="light"] .header:not(.scrolled) {
+  background: linear-gradient(
+    to bottom,
+    rgba(248, 244, 239, 0.72) 0%,
+    rgba(248, 244, 239, 0.00) 100%
+  );
+}

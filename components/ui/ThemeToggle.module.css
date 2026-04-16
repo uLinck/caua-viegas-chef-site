@@ -44,3 +44,10 @@
     transition: none;
   }
 }
+
+/* Light theme at scroll position 0: make button border visible against hero photo.
+   :global() escapes CSS Module scoping for the [data-theme] attribute selector
+   while .toggle remains locally scoped to this module. */
+:global([data-theme="light"]) .toggle {
+  border-color: rgba(44, 44, 44, 0.35);
+}
