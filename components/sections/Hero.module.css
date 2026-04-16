@@ -189,18 +189,13 @@
     height: 40px;
   }
 
-  /* Push text toward bottom of photo — avoids overlapping chef's face */
+  /* Push text toward lower third — avoids overlapping chef's face */
   .heroSection {
     align-items: flex-end;
-    padding-bottom: 72px;
+    padding-bottom: clamp(120px, 22vh, 220px);
   }
 
-  /* No scrim on mobile — text-shadow handles legibility instead */
-  .heroContent::before {
-    display: none;
-  }
-
-  /* Text shadow replaces scrim for contrast against the photo */
+  /* Text shadow for extra contrast on mobile */
   .heading {
     text-shadow:
       0 2px 16px rgba(0, 0, 0, 0.85),
