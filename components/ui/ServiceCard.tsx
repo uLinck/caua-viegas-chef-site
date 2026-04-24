@@ -16,6 +16,8 @@ const ctaUrls: Record<string, string> = {
 }
 
 export default function ServiceCard({ service }: ServiceCardProps) {
+  const isComingSoon = service.badge?.toLowerCase().includes('em') ?? false
+
   return (
     <div className={styles.serviceCard}>
       <Image
@@ -29,7 +31,9 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       />
       <div className={styles.cardOverlay} aria-hidden="true" />
       {service.badge && (
-        <span className={styles.cardBadge}>{service.badge}</span>
+        <span className={isComingSoon ? `${styles.cardBadge} ${styles.cardBadgeComingSoon}` : styles.cardBadge}>
+          {service.badge}
+        </span>
       )}
       <h3 className={styles.cardTitle}>{service.title}</h3>
       <span className={styles.cardSubtitle}>{service.subtitle}</span>
@@ -53,6 +57,9 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         ))}
       </ul>
       <div className={styles.cardCta}>
+        {isComingSoon && (
+          <p className={styles.comingSoonNote}>Curso em desenvolvimento. Inscrições ainda não abertas.</p>
+        )}
         <Button
           href={ctaUrls[service.id]}
           target="_blank"

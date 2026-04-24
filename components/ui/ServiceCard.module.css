@@ -20,6 +20,8 @@
 /* Background image — absolute fill, z-index 0 */
 .cardBgImage {
   z-index: 0;
+  filter: blur(1.5px);
+  transform: scale(1.04);
 }
 
 /* Two-layer overlay: dark vignette + bottom gradient for text legibility
@@ -148,5 +150,18 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.cardBadgeComingSoon {
+  background-color: rgba(15, 15, 13, 0.75);
+  border-color: rgba(201, 169, 110, 0.75);
+  color: #f4ddad;
+}
+
+.comingSoonNote {
+  margin: 0 0 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.78);
 }
 

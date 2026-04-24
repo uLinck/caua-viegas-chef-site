@@ -40,52 +40,34 @@
   }
 }
 
-/* Fallback: cards always visible without JS */
+/* Fallback: cards always visible sem JS */
 .servicesGrid > * {
   opacity: 1;
   transform: none;
 }
 
-/* Initial hidden state — set by JS before observation */
-.slideLeft {
-  opacity: 0 !important;
-  transform: translateX(-24px) !important;
+/* Estado inicial só quando o JS marca o grid como pronto para animar */
+.animateReady > * {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 560ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 560ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.slideRight {
-  opacity: 0 !important;
-  transform: translateX(24px) !important;
-}
+.animateReady > *:nth-child(1) { transition-delay: 60ms; }
+.animateReady > *:nth-child(2) { transition-delay: 140ms; }
+.animateReady > *:nth-child(3) { transition-delay: 220ms; }
+.animateReady > *:nth-child(4) { transition-delay: 300ms; }
 
-/* Keyframes for slide-in */
-@keyframes slideFromLeft {
-  from { opacity: 0; transform: translateX(-24px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideFromRight {
-  from { opacity: 0; transform: translateX(24px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
-/* Animation class — added by JS on intersection */
-.animating {
-  animation-duration: 0.9s;
-  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-  animation-fill-mode: forwards;
-}
-
-.slideLeft.animating {
-  animation-name: slideFromLeft;
-}
-
-.slideRight.animating {
-  animation-name: slideFromRight;
+.animateReady.isVisible > * {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .servicesGrid > * {
-    animation: none !important;
+  .animateReady > * {
+    transition: none !important;
     opacity: 1 !important;
     transform: none !important;
   }

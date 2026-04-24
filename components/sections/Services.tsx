@@ -12,36 +12,23 @@ export default function Services() {
   useEffect(() => {
     const grid = gridRef.current
     if (!grid) return
+
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-    const DURATION = 900
-    const STAGGER = [0, 150, 300, 450]
-    const children = Array.from(grid.children) as HTMLElement[]
-
-    // Set initial hidden state
-    children.forEach((el, i) => {
-      el.classList.add(i % 2 === 0 ? styles.slideLeft : styles.slideRight)
-    })
+    grid.classList.add(styles.animateReady)
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return
-          const el = entry.target as HTMLElement
-          const i = children.indexOf(el)
-          observer.unobserve(el)
-          setTimeout(() => {
-            el.classList.add(styles.animating)
-            setTimeout(() => {
-              el.classList.remove(styles.slideLeft, styles.slideRight, styles.animating)
-            }, DURATION + 50)
-          }, STAGGER[Math.min(i, STAGGER.length - 1)])
+          grid.classList.add(styles.isVisible)
+          observer.disconnect()
         })
       },
-      { threshold: 0.1 }
+      { threshold: 0.15 }
     )
 
-    children.forEach((el) => observer.observe(el))
+    observer.observe(grid)
     return () => observer.disconnect()
   }, [])
 
