@@ -41,8 +41,9 @@ export default function Hero() {
       <div className={styles.heroContent}>
         <span className={styles.eyebrow}>CAUÃ VIEGAS - PRIVATE CHEF</span>
         <h1 className={styles.heading}>
-          <span className={styles.headingLine}>CAUÃ VIEGAS</span>
-          <span className={styles.headingLine}>PRIVATE CHEF</span>
+          <span className={`${styles.headingLine} ${styles.headingLinePrimary}`}>CAUÃ VIEGAS</span>
+          <span className={styles.headingDivider} aria-hidden="true" />
+          <span className={`${styles.headingLine} ${styles.headingLineSecondary}`}>PRIVATE CHEF</span>
         </h1>
         <p className={styles.tagline}>
           Excelência na gastronomia Japonesa.
