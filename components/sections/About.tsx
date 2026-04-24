@@ -14,7 +14,7 @@ export default function About() {
             <div className={styles.portraitWrapper}>
               <Image
                 src="/images/about-chef.jpg"
-                alt="Cauã Viegas - Personal Chef"
+                alt="Cauã Viegas - Private Chef"
                 width={600}
                 height={800}
                 style={{ width: '100%', height: 'auto' }}
