@@ -18,7 +18,7 @@ export default function Hero() {
       {/* Mobile hero — portrait of chef behind sushi table */}
       <Image
         src="/images/hero-bg.jpeg"
-        alt="Cauã Viegas - Personal Chef preparando gastronomia japonesa"
+        alt="Cauã Viegas - Private Chef preparando gastronomia japonesa"
         fill
         className={styles.heroBgMobile}
         sizes="100vw"
@@ -30,7 +30,7 @@ export default function Hero() {
       {/* Desktop hero — moody kitchen scene with sushi in foreground */}
       <Image
         src="/images/chef-cooking-hero.png"
-        alt="Cauã Viegas - Pivot Chef preparando gastronomia japonesa"
+        alt="Cauã Viegas - Private Chef preparando gastronomia japonesa"
         fill
         className={styles.heroBgDesktop}
         sizes="100vw"
@@ -39,13 +39,13 @@ export default function Hero() {
       />
       <div className={styles.heroOverlay} aria-hidden="true" />
       <div className={styles.heroContent}>
-        <span className={styles.eyebrow}>PIVOT CHEF &#8212; GASTRONOMIA JAPONESA</span>
+        <span className={styles.eyebrow}>CAUÃ VIEGAS - PRIVATE CHEF</span>
         <h1 className={styles.heading}>
           <span className={styles.headingLine}>CAUÃ VIEGAS</span>
-          <span className={styles.headingLine}>PIVOT CHEF</span>
+          <span className={styles.headingLine}>PRIVATE CHEF</span>
         </h1>
         <p className={styles.tagline}>
-          Levo experiências gastronômicas únicas para a intimidade da sua casa.
+          Excelência na gastronomia Japonesa.
         </p>
         <div className={styles.ctaWrapper}>
           <Button href="#servicos" variant="primary">

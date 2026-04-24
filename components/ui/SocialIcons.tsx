@@ -20,7 +20,7 @@ export default function SocialIcons({
         href={instagramUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Instagram do Cauã Viegas"
+        aria-label="Instagram de Cauã Viegas - Private Chef"
         className={styles.socialLink}
       >
         <svg
@@ -38,7 +38,7 @@ export default function SocialIcons({
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="WhatsApp do Cauã Viegas"
+        aria-label="WhatsApp de Cauã Viegas - Private Chef"
         className={styles.socialLink}
       >
         <svg
@@ -54,7 +54,7 @@ export default function SocialIcons({
 
       <a
         href={`mailto:${email}`}
-        aria-label="Enviar email para Cauã Viegas"
+        aria-label="Enviar email para Cauã Viegas - Private Chef"
         className={styles.socialLink}
       >
         <svg

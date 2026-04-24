@@ -56,7 +56,7 @@ export default function Header() {
     <header className={clsx(styles.header, isScrolled && styles.scrolled)}>
       {/* Left: Logo */}
       <a href={resolveHref('#inicio')} className={styles.logo} onClick={closeDrawer}>
-        CAUÃ VIEGAS 道
+        Cauã Viegas - Private Chef
       </a>
 
       {/* Center: Desktop nav links */}

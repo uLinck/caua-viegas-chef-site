@@ -9,7 +9,7 @@ import styles from './gallery.module.css'
 export const metadata: Metadata = {
   title: 'Galeria',
   description:
-    'Galeria de fotos do Chef Cauã Viegas — eventos exclusivos, pratos de gastronomia japonesa, bastidores e cursos de sushi em Porto Alegre.',
+    'Galeria de fotos de Cauã Viegas - Private Chef: eventos exclusivos, pratos de gastronomia japonesa e bastidores profissionais.'
 }
 
 export default function GalleryPage() {

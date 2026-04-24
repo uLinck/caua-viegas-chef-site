@@ -12,8 +12,8 @@
   --color-text-primary: #2C2C2C;
   --color-text-secondary: #5A5550;
   --color-text-muted: #8A847D;
-  --color-primary: #A03030;
-  --color-primary-hover: #8B2626;
+  --color-primary: #BB4A4A;
+  --color-primary-hover: #A63D3D;
   --color-accent: #C9A96E;
   --color-whatsapp: #25D366;
 }
@@ -44,8 +44,8 @@
   --color-text-primary: #2C2C2C;
   --color-text-secondary: #5A5550;
   --color-text-muted: #8A847D;
-  --color-primary: #A03030;
-  --color-primary-hover: #8B2626;
+  --color-primary: #BB4A4A;
+  --color-primary-hover: #A63D3D;
   --color-accent: #C9A96E;
   --color-whatsapp: #25D366;
 }
@@ -65,7 +65,7 @@
   --color-primary-hover: var(--color-primary-hover);
   --color-accent: var(--color-accent);
   --color-whatsapp: var(--color-whatsapp);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-noto-serif-jp);
   --font-display: var(--font-cormorant);
   --radius-card: 16px;
   --radius-button: 12px;

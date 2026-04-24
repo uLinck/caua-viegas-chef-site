@@ -40,10 +40,9 @@
   grid-column: 1;
   justify-self: start;
   font-family: var(--font-display, Georgia, serif);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0.03em;
   color: var(--color-text-primary);
   text-decoration: none;
 }
