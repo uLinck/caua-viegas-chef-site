@@ -56,6 +56,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   { id: 'gallery-12', src: '/images/students-certificates.jpg', alt: 'Alunos do curso de sushi com certificados', width: 800, height: 600 },
   { id: 'gallery-13', src: '/images/hero-bg.jpeg', alt: 'Gastronomia japonesa de alto padrão', width: 800, height: 600 },
   { id: 'gallery-14', src: '/images/about-chef.jpg', alt: 'Retrato de Cauã Viegas - Private Chef', width: 800, height: 600 },
+  { id: 'gallery-15', src: '/images/pescados-new.jpg', alt: 'Pescados selecionados para consultoria técnica e maturação', width: 800, height: 600 },
 ]
 
 // Service items (3 services)
@@ -127,7 +128,7 @@ export const SERVICE_ITEMS: ServiceItem[] = [
     ],
     ctaLabel: 'Falar com o Consultor',
     messageKey: 'pescados',
-    imageSrc: '/images/three-fishes.jpg',
+    imageSrc: '/images/pescados-new.jpg',
     imageAlt: 'Seleção de pescados de alto padrão para consultoria gastronômica',
   },
 ]
