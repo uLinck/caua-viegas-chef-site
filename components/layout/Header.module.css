@@ -25,11 +25,20 @@
    Uses color-mix to derive 92% opacity from the theme's background color.
    This adapts to both light and dark mode automatically. */
 .scrolled {
+  /* Fallbacks for older iOS Safari without color-mix support */
+  background-color: rgba(15, 15, 13, 0.92);
+  border-bottom-color: rgba(201, 169, 110, 0.3);
+  /* Modern browsers */
   background-color: color-mix(in srgb, var(--color-background) 92%, transparent);
+  border-bottom-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-bottom-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
   box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .scrolled {
+  background-color: rgba(248, 244, 239, 0.92);
+  border-bottom-color: rgba(187, 74, 74, 0.26);
 }
 
 /* ============================================================
@@ -172,8 +181,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 80px 32px 32px;
+  padding: max(80px, env(safe-area-inset-top)) 32px max(32px, env(safe-area-inset-bottom));
   gap: 24px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   transform: translateX(100%);
   transition: transform 300ms ease-in-out;
   z-index: 49;
@@ -261,22 +273,11 @@
   }
 }
 
-/* Light theme at scroll 0: transparent header with white text — identical to dark theme.
-   The hero photo provides the visual backdrop; text must be white to be readable.
-   Uses :not(.scrolled) to avoid competing with the frosted-glass .scrolled rule. */
+/* Light theme at scroll 0:
+   keep header controls visible even over bright hero highlights. */
 [data-theme="light"] .header:not(.scrolled) {
-  background: transparent;
-  border-bottom-color: transparent;
-}
-
-[data-theme="light"] .header:not(.scrolled) .logo {
-  color: rgba(255, 255, 255, 0.95);
-}
-
-[data-theme="light"] .header:not(.scrolled) .navLink {
-  color: rgba(255, 255, 255, 0.80);
-}
-
-[data-theme="light"] .header:not(.scrolled) .hamburgerLine {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(248, 244, 239, 0.82);
+  border-bottom-color: rgba(187, 74, 74, 0.18);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }

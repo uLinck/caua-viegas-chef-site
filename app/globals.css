@@ -81,12 +81,17 @@
 
 html {
   scroll-behavior: smooth;
+  /* iOS Safari compatibility: prevent accidental horizontal jitter */
+  overflow-x: hidden;
+  /* Keep text scaling consistent on iPhone */
+  -webkit-text-size-adjust: 100%;
   /* Offset anchor targets by the fixed header height so sections
      are not hidden beneath the 64px nav bar when scrolled into view */
   scroll-padding-top: 64px;
 }
 
 body {
+  overflow-x: hidden;
   background-color: var(--color-background);
   color: var(--color-text-primary);
   font-family: var(--font-sans, system-ui, sans-serif);
