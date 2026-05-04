@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { usePathname } from 'next/navigation'
 import { NAV_LINKS, WHATSAPP_URL_FAB } from '@/lib/constants'
 import ThemeToggle from '@/components/ui/ThemeToggle'
@@ -18,7 +18,6 @@ export default function Header() {
 
   const [isScrolled, setIsScrolled] = useState(false)
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
-  const lockedScrollY = useRef(0)
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20)
@@ -27,41 +26,13 @@ export default function Header() {
   }, [])
 
   useEffect(() => {
-    const body = document.body
-
     if (isDrawerOpen) {
-      lockedScrollY.current = window.scrollY
-      body.style.position = 'fixed'
-      body.style.top = `-${lockedScrollY.current}px`
-      body.style.left = '0'
-      body.style.right = '0'
-      body.style.width = '100%'
-      body.style.overflow = 'hidden'
+      document.body.style.overflow = 'hidden'
     } else {
-      const hadLock = body.style.position === 'fixed'
-      body.style.position = ''
-      body.style.top = ''
-      body.style.left = ''
-      body.style.right = ''
-      body.style.width = ''
-      body.style.overflow = ''
-
-      if (hadLock) {
-        window.scrollTo(0, lockedScrollY.current)
-      }
+      document.body.style.overflow = ''
     }
-
     return () => {
-      const hadLock = body.style.position === 'fixed'
-      body.style.position = ''
-      body.style.top = ''
-      body.style.left = ''
-      body.style.right = ''
-      body.style.width = ''
-      body.style.overflow = ''
-      if (hadLock) {
-        window.scrollTo(0, lockedScrollY.current)
-      }
+      document.body.style.overflow = ''
     }
   }, [isDrawerOpen])
 

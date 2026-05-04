@@ -12,11 +12,9 @@
               box-shadow 300ms ease-in-out;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .serviceCard:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  }
+.serviceCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 /* Background image — absolute fill, z-index 0 */
