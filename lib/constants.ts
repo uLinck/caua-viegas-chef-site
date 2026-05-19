@@ -13,7 +13,7 @@ export const WHATSAPP_MESSAGES = {
   fab: 'Olá, Cauã! Encontrei seu trabalho e gostaria de saber mais sobre seus serviços como Private Chef.',
   eventos: 'Olá, Cauã! Tenho interesse em contratar você para um Evento Exclusivo. Poderia me passar mais informações sobre disponibilidade e proposta?',
   consultoria: 'Olá, Cauã! Gostaria de saber mais sobre a Consultoria em Gastronomia Japonesa. Como funciona o processo?',
-  curso: 'Olá, Cauã! Tenho interesse no Curso Introdutório. Gostaria de entrar na lista de interesse para quando abrir novas turmas.',
+  curso: 'Olá, Cauã! Tenho interesse no Curso Introdutório de Sushi. Pode me enviar informações sobre conteúdo, formato, investimento e próximas turmas?',
   pescados: 'Olá, Cauã! Gostaria de saber mais sobre a Consultoria de Pescados. Como funciona o processo de análise e seleção para restaurantes?',
 } as const
 
@@ -97,10 +97,9 @@ export const SERVICE_ITEMS: ServiceItem[] = [
   },
   {
     id: 'curso',
-    badge: '⏳ Em Breve',
     title: 'Curso Introdutório de Sushi',
     subtitle: 'Domine a arte do sushi',
-    description: 'Curso introdutório com foco técnico para quem deseja construir base sólida na gastronomia japonesa. Conteúdo em fase final de desenvolvimento.',
+    description: 'Curso introdutório com foco técnico para quem deseja construir base sólida na gastronomia japonesa, com método profissional e aplicação prática desde a primeira aula.',
     highlight: 'Formação estruturada para iniciantes, com método profissional e aplicação prática.',
     items: [
       'Preparos base da gastronomia Japonesa',
@@ -108,7 +107,7 @@ export const SERVICE_ITEMS: ServiceItem[] = [
       'Manipulação correta',
       'Material didático incluso',
     ],
-    ctaLabel: 'Entrar na Lista de Interesse',
+    ctaLabel: 'Conhecer o Curso Introdutório',
     messageKey: 'curso',
     imageSrc: '/images/students-certificates.jpg',
     imageAlt: 'Alunos em formação técnica no curso introdutório de gastronomia japonesa',
